@@ -4,7 +4,7 @@
 }
 
 
-
+/*----------index-------------------*/
 .container {
     width: 90%;
     margin: auto;
@@ -57,7 +57,7 @@ header {
     }
 }
 
-
+/*--------Sobre------------------------*/
 main {
 
 
@@ -87,7 +87,7 @@ main {
         border-radius: 20px;
         color: white;
         width: 80%;
-        height: 55%;
+        height: 65%;
         font-size: 1.2rem;
         text-align: center;
         font-family: boldonse;
@@ -145,13 +145,13 @@ main {
         font-family: boldonse;
         text-align: center;
         color: white;
-        transform: translate(0%, 15%);
+        transform: translate(0%, 10%);
         background: rgb(41, 15, 13, 2);
         padding: 1rem;
         max-width: 500px;
         border-radius: 15px;
         margin-bottom: 30px;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
 
     }
 
@@ -174,8 +174,73 @@ main {
 
 }
 
+/*-----Galeria de Fotos-------------------*/
+body {
+    background-image: url("../imagens/TelaSite.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+}
+
+.container {
+    justify-items: center;
+}
+
+h2 {
+    padding: 10px 0;
+    font-family: Boldonse;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    letter-spacing: 1px;
+
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    justify-content: center;
+}
 
 
+.foto {
+
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.foto img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+}
+
+.foto img:hover {
+    transform: scale(1.1);
+}
+
+/*---------------Contato----------------*/
+
+
+
+
+/*----Rodapé-------------------------*/
 
 footer {
     margin-top: auto;
@@ -240,7 +305,7 @@ footer {
 
     .sobre {
         h2 {
-            transform: translate(80%, 15%);
+            transform: translate(0%, 15%);
             font-size: 1.5rem;
         }
 
@@ -251,5 +316,8 @@ footer {
         }
     }
 
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
 
+    }
 }
