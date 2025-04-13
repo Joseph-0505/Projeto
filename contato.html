@@ -58,6 +58,71 @@
         </div>
     </header>
 
+    <body>
+        <div class="form-container">
+
+            <form name="form-cadastro" method="post" action="http://www.professorburnes.com.br/teste-form.php">
+                <label for="nome">Digite seu Nome: </label>
+                <input type="text" name="nome" id="nome" size="50" maxlength="40" placeholder="Nome Completo"
+                    autocomplete="off" required class="Formularios">
+
+                <label for="email">Digite seu E-mail</label>
+                <input type="email" name="email" id="email" maxlength="50" placeholder="Digite um e-mail válido"
+                    autocomplete="off" required class="Formularios" inputmode="email">
+
+                <label for="telefone">Digite seu Telefone:</label>
+                <input type="text" id="telefone" required autocomplete="off" placeholder="(xx)xxxxx-xxxx"
+                    class="Formularios">
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Digite uma mensagem"
+                    class="Formularios"></textarea>
+                <br>
+                <button type="submit" id="botao" class="btn-submit">
+                    Enviar
+                </button>
+            </form>
+        </div>
+
+    </body>
+    <script>
+        //Captura o botão pelo id e adiciona um evento de clique
+        document.getElementById('botao').onclick = function () {
+            //obtem o valor do campo nome
+            var nome = document.getElementById('nome').value;
+            //obtem o valor do campo e-mail
+            var email = document.getElementById('email').value;
+            //obtem o valor do campo telefone
+            var telefone = document.getElementById('telefone').value;
+            //obtem o valor do campo mensagem
+            var mensagem = document.getElementById('mensagem').value;
+
+            //Verifica se todos os campos estao vazios ao mesmo tempo
+            if (nome == "" && email == "" && telefone == "" && mensagem == "") {
+                alert("Por favor, preencha todos os campos")
+            } else {
+                if (nome == "") {
+                    alert("Informe o nome");
+                }
+
+                if (email == "") {
+                    alert("Informe o email");
+                }
+
+                if (telefone == "") {
+                    alert("Informe o telefone");
+                }
+
+                if (mensagem == "") {
+                    alert("Informe um mensagem");
+                }
+            }
+
+            if (nome !== "" && email !== "" && telefone !== "" && mensagem !== "") {
+                alert("Contato enviado com sucesso!");
+            }
+        }
+    </script>
 
     <footer>
         &copy; 2025 King of Dragon. Criado por José Victor da Silva. Todos os direitos reservados.
