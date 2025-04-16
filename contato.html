@@ -23,12 +23,42 @@
 
 <body>
     <header class="header">
-        <div class="container">
+        <div class="header-mobile">
             <a href="index.html" title="Home" class="header-logo">
                 <img src="imagens/Logo.jpeg" alt="King of Dragon">
             </a>
-            <a href="javascript:mostrarmenu()" title="Menu" class="header-menu">
-                <i class="fa-solid fa-bars"></i>
+            <div class="header-menu">
+                <i id="header-teste" class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav class="header-nav">
+                <ul>
+                    <li>
+                        <a href="index.html" title="Home">Home</a>
+
+                    </li>
+                    <li>
+                        <a href="sobre.html" title="Sobre">Sobre</a>
+
+                    </li>
+                    <li>
+                        <a href="galeria.html" title="Galeria de Fotos">Galeria de Fotos</a>
+
+                    </li>
+                    <li>
+                        <a href="contato.html" title="Contato">Contato</a>
+
+                    </li>
+                    <li>
+                        <a href="jogar.html" title="Jogar" class="btn">Jogar</a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-desktop">
+            <a href="index.html" title="Home" class="header-logo">
+                <img src="imagens/Logo.jpeg" alt="King of Dragon">
             </a>
 
             <nav class="header-nav">
@@ -86,20 +116,16 @@
 
     </body>
     <script>
-        //Captura o botão pelo id e adiciona um evento de clique
         document.getElementById('botao').onclick = function () {
-            //obtem o valor do campo nome
+            // Obtém os valores dos campos
             var nome = document.getElementById('nome').value;
-            //obtem o valor do campo e-mail
             var email = document.getElementById('email').value;
-            //obtem o valor do campo telefone
             var telefone = document.getElementById('telefone').value;
-            //obtem o valor do campo mensagem
             var mensagem = document.getElementById('mensagem').value;
 
-            //Verifica se todos os campos estao vazios ao mesmo tempo
+            // Verifica se todos os campos estão vazios
             if (nome == "" && email == "" && telefone == "" && mensagem == "") {
-                alert("Por favor, preencha todos os campos")
+                alert("Por favor, preencha todos os campos");
             } else {
                 if (nome == "") {
                     alert("Informe o nome");
@@ -107,6 +133,13 @@
 
                 if (email == "") {
                     alert("Informe o email");
+                } else {
+                    // Validação de formato de e-mail
+                    var emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailValido.test(email)) {
+                        alert("Informe um e-mail válido");
+                        return; // Interrompe a execução se o e-mail for inválido
+                    }
                 }
 
                 if (telefone == "") {
@@ -114,14 +147,22 @@
                 }
 
                 if (mensagem == "") {
-                    alert("Informe um mensagem");
+                    alert("Informe uma mensagem");
                 }
             }
 
-            if (nome !== "" && email !== "" && telefone !== "" && mensagem !== "") {
+            // Verifica se todos os campos estão preenchidos corretamente
+            if (
+                nome !== "" &&
+                email !== "" &&
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) &&
+                telefone !== "" &&
+                mensagem !== ""
+            ) {
                 alert("Contato enviado com sucesso!");
             }
         }
+
     </script>
 
     <footer>
@@ -130,12 +171,25 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/aos.js"></script>
     <script>
-        function mostrarmenu() {
-            $(".header-nav").toggle();
-        }
+        // INICIO NAVBAR
+        const navbarIcon = document.getElementById("header-teste");
+        const headerNav = document.querySelector(".header-nav");
+
+
+        navbarIcon.addEventListener("click", function () {
+            setTimeout(function () {
+                headerNav.classList.toggle("active");
+            }, 500)
+        })
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth <= 480) {
+                headerNav.classList.remove("active");
+            }
+        });
+        // FIM NAVBAR
     </script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
 </body>
 
 

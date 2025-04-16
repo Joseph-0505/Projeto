@@ -22,30 +22,65 @@
 
 <body>
     <header class="header">
-        <div class="container">
+        <div class="header-mobile">
             <a href="index.html" title="Home" class="header-logo">
                 <img src="imagens/Logo.jpeg" alt="King of Dragon">
             </a>
-            <a href="javascript:mostrarmenu()" title="Menu" class="header-menu">
-                <i class="fa-solid fa-bars"></i>
+            <div class="header-menu">
+                <i id="header-teste" class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav class="header-nav">
+                <ul>
+                    <li>
+                        <a href="index.html" title="Home">Home</a>
+
+                    </li>
+                    <li>
+                        <a href="sobre.html" title="Sobre">Sobre</a>
+
+                    </li>
+                    <li>
+                        <a href="galeria.html" title="Galeria de Fotos">Galeria de Fotos</a>
+
+                    </li>
+                    <li>
+                        <a href="contato.html" title="Contato">Contato</a>
+
+                    </li>
+                    <li>
+                        <a href="jogar.html" title="Jogar" class="btn">Jogar</a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-desktop">
+            <a href="index.html" title="Home" class="header-logo">
+                <img src="imagens/Logo.jpeg" alt="King of Dragon">
             </a>
 
             <nav class="header-nav">
                 <ul>
                     <li>
                         <a href="index.html" title="Home">Home</a>
+
                     </li>
                     <li>
                         <a href="sobre.html" title="Sobre">Sobre</a>
+
                     </li>
                     <li>
                         <a href="galeria.html" title="Galeria de Fotos">Galeria de Fotos</a>
+
                     </li>
                     <li>
                         <a href="contato.html" title="Contato">Contato</a>
+
                     </li>
                     <li>
                         <a href="jogar.html" title="Jogar" class="btn">Jogar</a>
+
                     </li>
                 </ul>
             </nav>
@@ -84,9 +119,23 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/aos.js"></script>
     <script>
-        function mostrarmenu() {
-            $(".header-nav").toggle();
-        }
+        // INICIO NAVBAR
+        const navbarIcon = document.getElementById("header-teste");
+        const headerNav = document.querySelector(".header-nav");
+
+
+        navbarIcon.addEventListener("click", function () {
+            setTimeout(function () {
+                headerNav.classList.toggle("active");
+            }, 500)
+        })
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth <= 480) {
+                headerNav.classList.remove("active");
+            }
+        });
+        // FIM NAVBAR
     </script>
 </body>
 
