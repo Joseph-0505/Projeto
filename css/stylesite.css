@@ -7,8 +7,12 @@
 
 /*----------Header-------------------*/
 
-.header-nav.active {
+.header-mobile .header-nav {
     display: none;
+}
+
+.header-mobile .header-nav.active {
+    display: block;
 }
 
 header {
@@ -305,6 +309,32 @@ label,
     background: green;
 }
 
+/*---------Jogo----------------*/
+.jogo {
+    display: flex;
+    padding: 0px 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 250px auto 0;
+}
+
+.jogo-container {
+    display: none;
+}
+
+.mobile-warning {
+    display: block;
+    backdrop-filter: blur(4px);
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 5px 5px;
+    max-width: 85%;
+    color: white;
+    box-shadow: 0px 4px 10px black;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
 
 /*----Rodapé-------------------------*/
 
@@ -457,5 +487,25 @@ footer {
 
     h1 {
         font-size: 2rem;
+    }
+
+    /*-------Jogo------------------*/
+
+    .jogo-container {
+        display: block;
+
+        iframe {
+            max-width: 960px;
+            margin: -220px auto;
+            border-radius: 10px;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: none;
+        }
+
+    }
+
+    .mobile-warning {
+        display: none;
     }
 }
