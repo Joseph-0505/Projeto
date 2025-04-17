@@ -96,8 +96,8 @@ main {
         height: 40%;
         font-size: 1.2rem;
         text-align: center;
-        font-family: boldonse;
-        text-decoration: none;
+        margin-bottom: 100px;
+
     }
 
     .intro-title {
@@ -325,7 +325,6 @@ label,
 /*----Rodapé-------------------------*/
 
 footer {
-
     margin-top: auto;
     padding: 5px 1px;
     background-color: #341310;
