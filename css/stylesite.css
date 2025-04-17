@@ -80,13 +80,8 @@ header {
 
 
 
-/*--------Sobre------------------------*/
+
 main {
-    .banner {
-        position: relative;
-        height: 100vh;
-        overflow: hidden;
-    }
 
     img {
         width: 100%;
@@ -152,6 +147,7 @@ main {
     }
 }
 
+/*--------Sobre------------------------*/
 .sobre {
     background-color: #b1b1b1;
     min-height: 100vh;
@@ -416,18 +412,21 @@ footer {
         }
     }
 
-    main .banner .intro-overlay {
-        width: 890px;
-        height: 530px;
-        overflow: hidden;
+
+    main .intro-overlay {
+        width: 790px;
+        transform: translate(-50%, -0%);
+        height: 580px;
+        position: relative;
+        font-size: 2.5rem;
+
+    }
+
+    main .intro-title {
         font-size: 2.5rem;
     }
 
-    main .banner .intro-title {
-        font-size: 2.5rem;
-    }
-
-    main .banner .intro-text {
+    main .intro-text {
         font-size: 1.8rem;
         line-height: 2.8rem;
     }
