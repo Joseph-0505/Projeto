@@ -86,9 +86,8 @@ main {
 
     .intro-overlay {
         position: relative;
-        top: 50%;
         left: 50%;
-        transform: translate(-50%, 10%);
+        transform: translate(-50%, 5%);
         background: rgba(0, 0, 0, 0.7);
         padding: 1.7rem;
         border-radius: 20px;
@@ -257,9 +256,8 @@ body {
     padding: 10px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 100px;
     max-width: 300px;
-    margin: 100px auto 0 auto;
+    margin: 50px auto 0 auto;
 
 }
 
@@ -328,7 +326,7 @@ label,
 
 footer {
 
-    margin-top: auto;
+    margin-top: 50px;
     padding: 5px 1px;
     background-color: #341310;
     text-align: center;
