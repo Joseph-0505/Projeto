@@ -93,7 +93,7 @@ main {
         border-radius: 20px;
         color: white;
         width: 80%;
-        height: 55%;
+        height: 40%;
         font-size: 1.2rem;
         text-align: center;
         font-family: boldonse;
@@ -326,7 +326,7 @@ label,
 
 footer {
 
-    margin-top: 50px;
+    margin-top: auto;
     padding: 5px 1px;
     background-color: #341310;
     text-align: center;
